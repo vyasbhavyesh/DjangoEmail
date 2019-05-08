@@ -6,7 +6,9 @@ class NameForm(forms.Form):
 
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=100)
+    To = forms.CharField()
+    cc = forms.CharField(max_length=100)
+    bcc = forms.CharField(max_length=100)
+    subject = forms.CharField(max_length=300)
     message = forms.CharField(widget=forms.Textarea)
-    sender = forms.EmailField()
-    cc_myself = forms.BooleanField(required=False)
+
